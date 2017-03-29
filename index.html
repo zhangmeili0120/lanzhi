@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="keywords" content="兰知，设计，平面设计，色彩设计" />
+		<title>兰知科技</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="js/respond.min.js" ></script>
+		<script type="text/javascript" src="js/html5shiv.min.js" ></script>
+		<![endif]-->
+	</head>
+	<body>
+		
+		<!--头部导航-->
+		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+			    <div class="navbar-header" id="navbar-header">
+			        <!-- .navbar-toggle样式用于toggle收缩的内容，即nav-collapse collapse样式所在元素 -->
+			        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+				        <span class="sr-only"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+			        </button>
+			        <!-- 确保无论是宽屏还是窄屏，navbar-brand都显示 -->
+			        <a href="index.html" class="navbar-brand" id="logo"><img src="image/icon/logo.png"/></a>
+			    </div>
+			    <!-- 屏幕宽度小于768px时，div.navbar-responsive-collapse容器里的内容都会隐藏    显示icon-bar图标，当点击icon-bar图标时，再展开。屏幕大于768px时，默认显示。 -->
+			    <div class="collapse navbar-collapse navbar-responsive-collapse">
+			        <ul class="nav navbar-nav navbar-right" id="navbar-nav">
+			            <li><a href="html/project.html">WORK</a></li>
+			            <li><a href="html/zixun.html">资讯</a></li>
+			            <li><a href="html/about.html">关于</a></li>
+			            <li><a href="html/goods.html">商品</a></li>
+			            <li><a href="##">交互</a></li>
+			            <li><a href="##"><img src="image/icon/search.png"/></a></li>
+			        </ul>
+			    </div>
+			</div>
+		</div>
+		<div class="banner-padding"></div>
+		<!--轮播图-->
+		<div id="myCarousel_b" class="carousel slide">
+			<!-- 轮播（Carousel）指标 -->
+		  	<ol class="carousel-indicators">
+			    <li data-target="#myCarousel_b" data-slide-to="0" class="active"></li>
+			    <li data-target="#myCarousel_b" data-slide-to="1"></li>
+			    <li data-target="#myCarousel_b" data-slide-to="2"></li>
+			    <li data-target="#myCarousel_b" data-slide-to="3"></li>
+		   	</ol> 
+			<!--轮播内容-->
+			<div class="carousel-inner" >
+				<div class="item active"><a href="javascript:;"><img style="width:100%" src="image/首页/home_top_banner.png"/></a></div>
+				<div class="item "><a href="javascript:;"><img style="width:100%" src="image/商品/商品banner.png"/></a></div>
+				<div class="item "><a href="javascript:;"><img style="width:100%" src="image/首页/home_top_banner.png"/></a></div>
+				<div class="item"><a href="javascript:;"><img style="width:100%" src="image/商品/商品banner.png"/></a></div>
+			</div>
+			<!--两个按钮-->
+			<span class="carousel-control  left" href="#myCarousel_b" data-slide="prev" style=""></span>
+			<span class="carousel-control  right" href="#myCarousel_b" data-slide="next" style=""></span>
+		</div>
+		
+		
+		<!--关于兰知-->
+		<div class="about container">
+			<h2 class="title"><span>ABOUT US<b></b></span>关于兰知</h2>
+			<p>由2001年于广州成立的专业品牌策划与设计公司。14年来，赤风致力于为所有谋求长远发展的各类型企业提供品牌创建、品牌更新、品牌管理设计服务，当您第一次知道赤风品牌的时候，我们所服务的客户已遍及全国各地众多地区，成功为众多知名品牌提供专业而优质的品牌策划与设计服务。</p>
+			<a href="html/about.html"><div class="more">MORE<span>&gt;</span></div></a>
+		</div>
+		
+		<!--最新案例-->
+		<div class="projects container">
+			<h2 class="text-center title"><span>PROJECTS<b></b></span>最新案例</h2>
+			<div class="row projects-cont">
+				<div class="col-xs-6 col-sm-6 col-md-3">
+					<a href="html/project-detail.html"><img src="image/首页/home_project_icon.png" alt="" /></a>
+				</div>
+				<div class="col-xs-6 col-md-3">
+					<a href="html/project-detail.html"><img src="image/首页/home_project_icon.png" alt="" /></a>
+				</div>
+				<div class="col-xs-6  col-md-3">
+					<a href="html/project-detail.html"><img src="image/首页/home_project_icon.png" alt="" /></a>
+				</div>
+				<div class="col-xs-6  col-md-3">
+					<a href="html/project-detail.html"><img src="image/首页/home_project_icon.png" alt="" /></a>
+				</div>
+			</div>
+			<a href="html/project.html"><div class="more">MORE<span>&gt;</span></div></a>
+		</div>
+		
+		<!--最新资讯-->
+		<div class="news container">
+			<h2 class="text-center title"><span>NEWS<b></b></span>最新资讯</h2>
+			<div id="myCarousel" class="carousel slide news-cont row">	
+				<!--轮播内容-->
+				<div class="carousel-inner">
+					<!--item1-->
+					<div class="item active">
+						<div class="row">
+							<div class="col-xs-5 news-cont1"><a href="html/zixun-detail.html">
+								<img src="image/首页/home_news_banner.png"/>
+								<div class="row news-info" >
+									<p class="col-xs-8 col-xs-offset-2">身边有一群很酷的设计师朋友是怎样一种体验？</p>
+								</div>
+							</a></div>
+							<div class="col-xs-5 news-cont1"><a href="html/zixun-detail.html">
+								<img src="image/首页/home_news_banner.png"/>
+								<div class="row news-info" >
+									<p class="col-xs-8 col-xs-offset-2">身边有一群很酷的设计师朋友是怎样一种体验？</p>
+								</div>
+							</a></div>
+						</div>	
+					</div>	
+					<!--item2-->
+					<div class="item">
+						<div class="row">
+							<div class="col-xs-5 news-cont1"><a href="html/zixun-detail.html">
+								<img src="image/首页/news_2.jpg"/>
+								<div class="row news-info" >
+									<p class="col-xs-8 col-xs-offset-2">身边有一群很酷的设计师朋友是怎样一种体验？</p>
+								</div>
+							</a></div>
+							<div class="col-xs-5 news-cont1"><a href="html/zixun-detail.html">
+								<img src="image/首页/news_2.jpg"/>
+								<div class="row news-info" >
+									<p class="col-xs-8 col-xs-offset-2">身边有一群很酷的设计师朋友是怎样一种体验？</p>
+								</div>
+							</a></div>
+						</div>	
+					</div>
+				</div>	
+				
+				<!--左右按钮-->
+				<span class="carousel-control  btn-l" href="#myCarousel" data-slide="prev" ></span>
+				<span class="carousel-control  btn-r" href="#myCarousel" data-slide="next" ></span>
+			</div>
+		</div>
+		
+		<!--banner_center-->
+		<div class="banner_center">
+			<img src="image/首页/home_center_banner.png" alt="" />
+		</div>
+		
+		<!--兰知核心-->
+		<div class="team-core container">
+			<h2 class="text-center title"><span>TEAM CORE<b></b></span>兰知核心</h2>
+			<div class="row team-core-cont">
+				<div class="col-xs-4 ">
+					<img src="image/首页/home_team_core_icon.png" alt="" />
+					<h3>某某某</h3>
+					<p>兰知科技创始人/品牌顾问</p>
+					<p>毕业于中国美院</p>
+					<p>2012年红点奖</p>
+				</div>
+				<div class="col-xs-4">
+					<img src="image/首页/home_team_core_icon.png" alt="" />
+					<h3>某某某</h3>
+					<p>兰知科技创始人/品牌顾问</p>
+					<p>毕业于中国美院</p>
+					<p>2012年红点奖</p>
+				</div>
+				<div class="col-xs-4 ">
+					<img src="image/首页/home_team_core_icon.png" alt="" />
+					<h3>某某某</h3>
+					<p>兰知科技创始人/品牌顾问</p>
+					<p>毕业于中国美院</p>
+					<p>2012年红点奖</p>
+				</div>
+			</div>
+		</div>
+		
+		<!--business-->
+		<div class="business container">
+			<h2 class="text-center title"><span>BUSINESS<b></b></span>业务范畴</h2>
+			<dl class="row dl1">
+				<dt class="col-xs-3 col-xs-offset-1"><img src="image/icon/1.png"/></dt>
+				<dd class="col-xs-8">
+					<h4>平面设计</h4>
+					<p>平面设计以“视觉”作为沟通和表现的方式。透过多种方式来创造和结合符号、图片和文字，借此做出用来传达想法或讯息的视觉表现。是传递企业信息和理念最基本，最直接的一种推广方式。兰知平面设计的业务范围有：L</p>
+				</dd>
+			</dl>
+			<dl class="row dl2">
+				<dt class="col-xs-3 col-xs-offset-1"><img src="image/icon/2.png"/></dt>
+				<dd class="col-xs-8">
+					<h4>色彩研究/设计</h4>
+					<p>平面设计以“视觉”作为沟通和表现的方式。透过多种方式来创造和结合符号、图片和文字，借此做出用来传达想法或讯息的视觉表现。是传递企业信息和理念最基本，最直接的一种推广方式。兰知平面设计的业务范围有：L</p>
+				</dd>
+			</dl>
+		</div>
+		
+		<!--clients-->
+		
+		<div class="clients container">
+			<h2 class="text-center title"><span>CLIENTS<b></b></span>我们的客户</h2>
+			<div id="myCarousel2" class="carousel slide" >
+				<!--轮播内容-->
+				<div class="carousel-inner">
+					<div class="clients-cont row item active" >
+						<div class="col-xs-6 col-sm-3 "><a href="javascript:;"><img src="image/首页/home_client_icon.png" alt="" /></a></div>
+						<div class="col-xs-6 col-sm-3 "><a href="javascript:;"><img src="image/首页/home_client_icon.png" alt="" /></a></div>
+						<div class="col-xs-6 col-sm-3 "><a href="javascript:;"><img src="image/首页/home_client_icon.png" alt="" /></a></div>
+						<div class="col-xs-6 col-sm-3 "><a href="javascript:;"><img src="image/首页/home_client_icon.png" alt="" /></a></div>
+						<div class=" col-xs-6 col-sm-3 "><a href="javascript:;"><img src="image/首页/home_client_icon.png" alt="" /></a></div>
+						<div class=" col-xs-6 col-sm-3 "><a href="javascript:;"><img src="image/首页/home_client_icon.png" alt="" /></a></div>
+						<div class=" col-xs-6 col-sm-3 "><a href="javascript:;"><img src="image/首页/home_client_icon.png" alt="" /></a></div>
+						<div class=" col-xs-6 col-sm-3 "><a href="javascript:;"><img src="image/首页/home_client_icon.png" alt="" /></a></div>	
+					</div>
+					<div class="clients-cont row item" >
+						<div class=" col-xs-6 col-sm-3"><a href="javascript:;"><img src="image/首页/home_client_icon2.png" alt="" /></a></div>
+						<div class=" col-xs-6 col-sm-3"><a href="javascript:;"><img src="image/首页/home_client_icon2.png" alt="" /></a></div>
+						<div class="col-xs-6 col-sm-3"><a href="javascript:;"><img src="image/首页/home_client_icon2.png" alt="" /></a></div>
+						<div class=" col-xs-6 col-sm-3"><a href="javascript:;"><img src="image/首页/home_client_icon2.png" alt="" /></a></div>
+						<div class=" col-xs-6 col-sm-3"><a href="javascript:;"><img src="image/首页/home_client_icon2.png" alt="" /></a></div>
+						<div class=" col-xs-6 col-sm-3"><a href="javascript:;"><img src="image/首页/home_client_icon2.png" alt="" /></a></div>
+						<div class="col-xs-6 col-sm-3"><a href="javascript:;"><img src="image/首页/home_client_icon2.png" alt="" /></a></div>
+						<div class="col-xs-6 col-sm-3"><a href="javascript:;"><img src="image/首页/home_client_icon2.png" alt="" /></a></div>	
+					</div>
+				</div>	
+				<!--左右按钮-->
+				<div class="btn-clients">
+					<a class="carousel-control left" href="#myCarousel2" data-slide="prev">&lt;</a>
+					<a class="carousel-control right" href="#myCarousel2" data-slide="next">&gt;</a>
+				</div>
+			</div>
+		</div>
+		
+
+		<!--footer-->
+		<div class="footer ">
+			<div class="container">
+				<div class="row footer-cont ">
+					<div class="footer-l col-sm-3 col-xs-12 ">
+						<h2>兰知科技</h2>
+						<p>宣传语鱼鱼鱼与赤峰合作，您将会得到更成熟的品牌建设服务。我们以客户至上，同时也相互挑战，力求呈现最好的品牌建设成果。</p>
+					</div>
+					<div class="footer-c col-sm-6 col-xs-12  ">
+						<dl class="footer-c1 ">
+							<dt>咨询热线：</dt>
+							<dd><a href="tel:82787888">82787888</a></dd>
+						</dl>
+						<dl class="footer-c2 ">
+							<dt>地址：</dt>
+							<dd>浙江省台州市黄岩区十院线工业区</dd>
+						</dl>
+						<dl class="footer-c3">
+							<dt>邮箱：</dt>
+							<dd><a href="mailto:zhangmeili0120@163.com">86 576 82968008</a></dd>
+						</dl>
+					</div>
+					<div class="footer-r col-sm-3 col-xs-12 ">
+						<p>关注我们</p>
+						<img src="image/首页/qr_code.png" alt="" />
+					</div>
+				</div>
+				<p class="copyright col-xs-12">浙ICP备08001898 Copyright © 2015-1016 SUDASHAN. All Rights Reserved.</p>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.js" ></script>
+		<script type="text/javascript">
+		$(function(){
+			$('.news-cont1').mouseenter(function(){
+				$(this).find('.news-info').css('display','block');
+			});
+			$('.news-cont1').mouseleave(function(){
+				$(this).find('.news-info').css('display','none');
+			});
+			
+			 $("#myCarousel_b").carousel();
+			 
+		});	 
+		</script>
+	</body>
+</html>

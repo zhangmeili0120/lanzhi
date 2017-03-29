@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+		<title>资讯页面</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="../js/html5shiv.min.js" ></script>
+		<script type="text/javascript" src="../js/respond.min.js" ></script>
+		<![endif]-->
+	</head>
+	<body>
+		<!--头部导航-->
+		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+			    <div class="navbar-header" id="navbar-header">
+			        <!-- .navbar-toggle样式用于toggle收缩的内容，即nav-collapse collapse样式所在元素 -->
+			        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+				        <span class="sr-only"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+			        </button>
+			        <!-- 确保无论是宽屏还是窄屏，navbar-brand都显示 -->
+			        <a href="../index.html" class="navbar-brand" id="logo"><img src="../image/icon/logo.png"/></a>
+			    </div>
+			    <!-- 屏幕宽度小于768px时，div.navbar-responsive-collapse容器里的内容都会隐藏    显示icon-bar图标，当点击icon-bar图标时，再展开。屏幕大于768px时，默认显示。 -->
+			    <div class="collapse navbar-collapse navbar-responsive-collapse">
+			        <ul class="nav navbar-nav navbar-right" id="navbar-nav">
+			            <li><a href="project.html">WORK</a></li>
+			            <li class="active"><a href="zixun.html">资讯</a></li>
+			            <li><a href="about.html">关于</a></li>
+			            <li><a href="goods.html">商品</a></li>
+			            <li><a href="##">交互</a></li>
+			            <li><a href="##"><img src="../image/icon/search.png"/></a></li>
+			        </ul>
+			    </div>
+			</div>
+		</div>
+		<div class="banner-padding"></div>
+		
+		<div class="zixun-banner">
+			<h1><img src="../image/资讯/zixun-logo.png" /></h1>
+			<h2>Design of LANKNOWS</h2>
+			<p>兰知科技，值得信赖的设计团队</p>
+		</div>
+		
+		<div class="zixun-articles container">
+			
+		</div>
+		<div class="zixun-pages text-center" >
+				<img src="../image/icon/button-l.png" /><p class="pages text-center"></p><img src="../image/icon/button-r.png"  />
+			</div>
+		<!--推荐文章-->
+		<div class="recommend container">
+			<div class="recommend-tl"><span></span>推荐文章</div>
+			<div class="row recommend-cont">
+				<dl class="col-xs-6 col-sm-4">
+					<dt><a href="zixun-detail.html"><img src="../image/资讯/资讯2.png" alt="" /></a></dt>
+					<dd class="dd1">平面设计在中国的发展道路</dd>
+					<dd class="dd2">平面设计/中国</dd>
+				</dl> 
+				<dl class="col-xs-6 col-sm-4">
+					<dt><a href="zixun-detail.html"><img src="../image/资讯/资讯2.png" alt="" /></a></dt>
+					<dd class="dd1">平面设计在中国的发展道路</dd>
+					<dd class="dd2">平面设计/中国</dd>
+				</dl>
+				<dl class="col-xs-6 col-sm-4">
+					<dt><a href="zixun-detail.html"><img src="../image/资讯/资讯2.png" alt="" /></a></dt>
+					<dd class="dd1">平面设计在中国的发展道路</dd>
+					<dd class="dd2">平面设计/中国</dd>
+				</dl>
+			</div>
+		</div>
+		
+		<!--footer-->
+		<div id="footer"></div>
+		
+		<script type="text/javascript" src="../js/jquery-1.11.0.js" ></script>
+		<script type="text/javascript" src="../js/bootstrap.js" ></script>
+		<script type="text/javascript" src="../js/common.js" ></script>
+		<script type="text/javascript">
+		$(function(){
+			$.getJSON('../information_normal.json',function(da){
+				var pages=null;
+				//总的页码数目
+				var pageNum=da.length%6==0?da.length/6:Math.floor(da.length/6)+1;
+				var x=null;
+
+				//循环动态添加所有页码
+				for(var i=1;i<=pageNum;i++){
+					var $a=$('<a>'+i+'</a>')
+					$('.zixun-pages .pages').append($a);	
+				}
+				
+				//点击去到对于页码的页面
+				$('.pages a').on('click',$('.zixun-articles'),function(){
+					pages=$(this).index();
+					$('.zixun-articles').find('dl').remove();
+					page($(this).index())
+				})
+				//上一页
+				$('.zixun-pages img').eq(0).click(function(){
+					x=$('.pages a.page-active').index();
+					x--;
+					if(x<=0){
+						x=0;
+					};
+					$('.zixun-articles').find('dl').remove();
+					page(x);
+					
+				})
+				
+				//下一页
+				$('.zixun-pages').children('img:last-child').click(function(){
+					x=$('.pages a.page-active').index();
+					x++;
+					if(x>=pageNum){
+						x=pageNum-1;
+					};
+					$('.zixun-articles').find('dl').remove();
+					page(x);
+				})
+				
+				//封装page函数
+				function page(pages){
+					var end = -1;
+					if(da.length%6==0){
+						end = (pages+1)*6;
+					}else{
+						if(pages+1==pageNum){
+							end =da.length;
+						}else{
+							end = (pages+1)*6;
+						}
+					}
+					
+					for(var i=(pages)*6;i<end;i++){
+						var $dl=$('<dl class="row">'+
+								'<dt class="col-xs-4"><a href="zixun-detail.html"><img src="'+da[i].url+'" /></a></dt>'+
+								'<dd class="col-xs-8">'+
+									'<h3>'+da[i].title+'<span>'+da[i].date+'</span></h3>'+
+									'<b></b>'+
+									'<p>'+da[i].detail+'</p>'+
+									'<a href="zixun-detail.html"><div class="more">MORE<span>&gt;</span></div></a>'+
+								'</dd>'+
+							'</dl>');
+						$('.zixun-articles').append($dl);
+						$('.pages a').eq(pages).addClass('page-active').siblings('a').removeClass('page-active');
+					}
+				}
+				page(0);
+				
+			})
+
+
+		})
+
+			
+			
+			
+		</script>
+	</body>
+</html>

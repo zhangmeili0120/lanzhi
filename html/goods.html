@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+		<title>商品</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="../js/html5shiv.min.js" ></script>
+		<script type="text/javascript" src="../js/respond.min.js" ></script>
+		<![endif]-->
+	</head>
+	<body>
+		<!--头部导航-->
+		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+			    <div class="navbar-header" id="navbar-header">
+			        <!-- .navbar-toggle样式用于toggle收缩的内容，即nav-collapse collapse样式所在元素 -->
+			        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+				        <span class="sr-only"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+			        </button>
+			        <!-- 确保无论是宽屏还是窄屏，navbar-brand都显示 -->
+			        <a href="../index.html" class="navbar-brand" id="logo"><img src="../image/icon/logo.png"/></a>
+			    </div>
+			    <!-- 屏幕宽度小于768px时，div.navbar-responsive-collapse容器里的内容都会隐藏    显示icon-bar图标，当点击icon-bar图标时，再展开。屏幕大于768px时，默认显示。 -->
+			    <div class="collapse navbar-collapse navbar-responsive-collapse">
+			        <ul class="nav navbar-nav navbar-right" id="navbar-nav">
+			            <li><a href="project.html">WORK</a></li>
+			            <li><a href="zixun.html">资讯</a></li>
+			            <li><a href="about.html">关于</a></li>
+			            <li class="active"><a href="goods.html">商品</a></li>
+			            <li><a href="##">交互</a></li>
+			            <li><a href="##"><img src="../image/icon/search.png"/></a></li>
+			        </ul>
+			    </div>
+			</div>
+		</div>
+		<div class="banner-padding"></div>
+		
+		<!--轮播图-->
+		<div id="myCarousel_b" class="carousel slide">
+			<!-- 轮播（Carousel）指标 -->
+		  	<ol class="carousel-indicators">
+			    <li data-target="#myCarousel_b" data-slide-to="0" class="active"></li>
+			    <li data-target="#myCarousel_b" data-slide-to="1"></li>
+			    <li data-target="#myCarousel_b" data-slide-to="2"></li>
+			    <li data-target="#myCarousel_b" data-slide-to="3"></li>
+		   	</ol> 
+			<!--轮播内容-->
+			<div class="carousel-inner" style="overflow: hidden;">
+				<div class="item active"><a href="javascript:;"><img style="width:100%" src="../image/商品/商品banner.png" /></a></div>
+				<div class="item "><a href="javascript:;"><img style="width:100%" src="../image/首页/home_top_banner.png"/></a></div>
+				<div class="item "><a href="javascript:;"><img style="width:100%" src="../image/商品/商品banner.png" /></a></div>
+				<div class="item "><a href="javascript:;"><img style="width:100%" src="../image/首页/home_top_banner.png"/></a></div>
+			</div>
+			<!--两个按钮-->
+			<span class="carousel-control  left" href="#myCarousel_b" data-slide="prev" style="background:0;background: url(../image/icon/banner-l.png) no-repeat center;cursor: pointer;"></span>
+			<span class="carousel-control  right" href="#myCarousel_b" data-slide="next" style="background:url(../image/icon/banner-r.png) no-repeat center;cursor: pointer;"></span>
+		</div>
+		
+		<!--热门商品-->
+		<div class="hot">
+			<h2 class="text-center title-goods"><p>HOT COMMODITY</p><span>热门商品</span></h2>
+			<div class="hot-cont container">
+				<dl class="row">
+					<dt class="col-sm-4 col-sm-offset-1 col-xs-10 col-xs-offset-1"><a href="goods-detail.html">
+						<img src="../image/商品/商品4.png"/>
+						<div class="hot-cont-l">
+							<h3>200<span>/RMB</span><b></b></h3>
+							<p>韩款新版时尚收腰大毛领连帽羽绒服女中长款修身加厚冬装外套女装</p>
+							<b class="more-hot">MORE<span>&gt;</span></b>
+						</div>
+					</a></dt>
+					
+				</dl>
+			</div>
+		</div>
+		
+		<!--所有分类-->
+		<div class="all container">
+			<h2 class="text-center title-goods"><p>ALL CLASSIFICATION</p><span>所有分类</span></h2>
+			<ul class="all-tl row">
+				<li class="col-xs-offset-1 col-xs-2 active-all"><img src="../image/icon/icon-teb-1.png"/><p>衣</p></li>
+				<li class="col-xs-2"><img src="../image/icon/icon-teb-2.png"/><p>食</p></li>
+				<li class="col-xs-2"><img src="../image/icon/icon-teb-3.png"/><p>用</p></li>
+				<li class="col-xs-2"><img src="../image/icon/icon-teb-4.png"/><p>玩</p></li>
+				<li class="col-xs-2"><img src="../image/icon/icon-teb-5.png"/><p>赏</p></li>
+			</ul>
+			<ul class="row all-cont">
+			</ul>
+			<div class="zixun-pages">
+				<img src="../image/icon/button-l.png" alt="" />
+				<p class="pages"></p>
+				<img src="../image/icon/button-r.png" alt="" />
+			</div>
+		</div>
+		
+		<!--footer-->
+		<div id="footer"></div>
+		<script type="text/javascript" src="../js/jquery-1.11.0.js" ></script>
+		<script type="text/javascript" src="../js/bootstrap.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<script type="text/javascript">
+		//热门商品，切换显示层
+			$('.hot-cont dl').children().mouseover(function(){
+				$(this).find('div').css('display','block');
+			});
+			$('.hot-cont dl').mouseout(function(){
+				$(this).find('div').css('display','none');
+			});
+			
+			$('.hot-cont').on('mouseover','dd',function(){
+				$(this).find('div').css('display','block');
+			});
+				
+		
+		//热门商品，数据展示
+		$.getJSON('../information_normal.json',function(da){
+			//热门商品右侧循环
+			for(var i=0;i<4;i++){
+				var $dd=$('<dd class="col-sm-3 col-xs-6"><a href="goods-detail.html">'+
+						'<img src="'+da[i].url+'"/>'+
+						'<div class="hot-cont-r">'+
+							'<h3>'+da[i].date+'<span>/RMB</span><b></b></h3>'+
+							'<p>'+da[i].title+'</p>'+
+							'<b class="more-hot">MORE<span>&gt;</span></b>'+
+						'</div>'+
+					'</a></dd>');
+				$('.hot-cont .row').append($dd);
+			}
+		});
+		
+		//所有分类
+		$.getJSON('../classify_information.json',function(dat){
+			
+			//初始化，显示衣
+			$.map(dat, function(res) {
+				classify(res.value);
+			});
+			
+			var thiskey;
+			//筛选导航条
+			$('.all-tl li').click(function(){
+				$(this).addClass('active-all').siblings('li').removeClass('active-all');
+				thiskey=$('.active-all').text();
+				//根据点击的关键字请求不同内容
+				$.map(dat,function(res){
+					if(res.key==thiskey){
+						classify(res.value)
+					}
+				});
+			});
+			
+			
+			function classify(da){		
+				//所有分类	
+				var pages=null;
+				//总的页码数目
+				var pageNum=da.length%16==0?da.length/12:Math.floor(da.length/16)+1;
+				var x=null;
+	
+				//循环动态添加所有页码
+				$('.zixun-pages .pages a').remove();
+				for(var i=1;i<=pageNum;i++){
+					var $a=$('<a>'+i+'</a>')
+					$('.zixun-pages .pages').append($a);	
+				}
+				
+				//点击去到对于页码的页面
+				$('.pages a').on('click',$('.projects-main'),function(){
+					pages=$(this).index();
+					$('.all-cont').find('li').remove();
+					page($(this).index());
+				})
+				//上一页
+				$('.zixun-pages img').eq(0).click(function(){
+					x=$('.pages a.page-active').index();
+					x--;
+					if(x<=0){
+						x=0;
+					};
+					$('.all-cont').find('li').remove();
+					page(x);
+					
+				})
+				
+				//下一页
+				$('.zixun-pages').children('img:last-child').click(function(){
+					x=$('.pages a.page-active').index();
+					x++;
+					if(x>=pageNum){
+						x=pageNum-1;
+					};
+					$('.all-cont').find('li').remove();
+					page(x);
+					console.log(x)
+				})
+				
+				//封装page函数
+				function page(pages){
+					var end = -1;
+					if(da.length%16==0){
+						end = (pages+1)*16;
+					}else{
+						if(pages+1==pageNum){
+							end =da.length;
+						}else{
+							end = (pages+1)*16;
+						}
+					}
+					
+					//先清空，在循环添加
+					$('.all-cont li').remove();
+					for(var i=(pages)*16;i<end;i++){
+						var $li=$('<li class="col-sm-3 col-xs-6"><a href="goods-detail.html"><img src="'+da[i].url+'"/></a><h4>'+da[i].title+'<span>MORE</span></h4><p>'+da[i].date+'</p></li>')
+						$('.all-cont').append($li);
+						$('.pages a').eq(pages).addClass('page-active').siblings('a').removeClass('page-active');
+					}
+				}
+				page(0);
+			};//classify end!
+			
+		});
+		</script>
+	
+	
+	</body>
+</html>
